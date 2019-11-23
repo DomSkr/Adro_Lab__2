@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/logo_wsb_content_desc"
+            app:srcCompat="@mipmap/logo_gdansk" />
+
+        <EditText
+            style="@style/back2"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_hint" />
+
+        <EditText
+            style="@style/back2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/password_hint"
+            android:inputType="text|textPassword" />
+
+        <Button
+            android:id="@+id/przyciskLogowania"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/log_in_button_text" />
+
+    </LinearLayout>
+</ScrollView>
