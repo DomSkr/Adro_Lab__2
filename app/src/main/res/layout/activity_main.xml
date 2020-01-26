@@ -1,53 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <data>
+        <variable
+            name="viewModel"
+            type="com.kubickiengineering.laboratorium__2.MainActivityViewModel" />
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="16dp"
-            android:contentDescription="@string/logo_wsb_content_desc"
-            app:srcCompat="@mipmap/logo_gdansk" />
-
-        <EditText
-            android:id="@+id/from"
-            style="@style/back2"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:hint="from" />
-
-        <EditText
-            android:id="@+id/subject"
-            style="@style/back2"
-            android:layout_height="wrap_content"
-
-            android:layout_marginBottom="4dp"
-            android:hint="subject" />
-
-        <EditText
-            android:id="@+id/text"
-            style="@style/back2"
-            android:layout_height="wrap_content"
-
-            android:layout_marginBottom="4dp"
-            android:hint="text" />
-
-        <Button
-            android:id="@+id/przyciskLogowania"
-            style="@style/Widget.AppCompat.Button.Colored"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="send" />
+            android:orientation="vertical"
+            tools:context=".MainActivity">
 
-    </LinearLayout>
-</ScrollView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/logo_wsb_content_desc"
+                app:srcCompat="@mipmap/logo_gdansk" />
+
+            <TextView
+                android:id="@+id/from"
+                style="@style/back2"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:hint="from"
+                android:text="@{viewModel.d}" />
+
+            <EditText
+                android:id="@+id/subject"
+                style="@style/back2"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="4dp"
+                android:hint="subject" />
+
+            <EditText
+                android:id="@+id/text"
+                style="@style/back2"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="4dp"
+                android:hint="text" />
+
+            <Button
+                android:id="@+id/przyciskLogowania"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="send" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

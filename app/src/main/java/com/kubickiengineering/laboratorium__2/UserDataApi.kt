@@ -1,11 +1,15 @@
 package com.kubickiengineering.laboratorium__2
 
 import io.reactivex.Single
+import retrofit2.Call
 import retrofit2.http.GET
 
 interface UserDataApi {
 
     @GET("people/1/")
-    fun postUser(): Single<PersonSW>
+    fun postUser(): Single<PersonSW> // TX
+
+    @GET("people/1/")
+    fun getUserAsync() : Call<PersonSW> // Callback
 }
 

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 29
@@ -24,7 +24,13 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
+
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -46,6 +52,12 @@ dependencies {
 //    implementation "com.squareup.retrofit2:adapter-rxjava:2.3.0"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     implementation "com.squareup.retrofit2:converter-gson:2.3.0"
+
+    // VIEW MODEL
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:2.1.0"
+
 
 
 }
